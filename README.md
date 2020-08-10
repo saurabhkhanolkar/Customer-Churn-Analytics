@@ -5,7 +5,7 @@
  ## Objective of the project:
  ###### 1)Analyse an organization specific customer data to zero-in on the most statistically significant factors that are impacting the customer churn at the organization.
  ###### 2)Develop a classification model with the results obtained in stage one. The model will detect customer churn for individual customers. If customer churn detected, it will     predict the customer lifetime value for the customer in consideration.
- ###### 3)Deploy the model in the form of a web application in the cloud.
+ ###### 3)Deploy the model in the form of a web application to the cloud.
  
  ## Outcomes expected:
  ###### The application will enable the decision makers at an organization to plan out their marketing strategy focused on customer retention, eventually saving them a major chunk of time, resources and energy.
