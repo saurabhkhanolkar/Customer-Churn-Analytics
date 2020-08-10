@@ -8,4 +8,4 @@ Following the debacle of the 2008 subprime financial crisis, the Reserve Bank of
  3)Deploy the model in the form of a web application in the cloud.
  
  ## Outcomes expected:
- The application will aid the decision makers at an organization to plan out their marketing strategy focused on customer retention, eventually saving them a major chunk of time, resources and energy.
+ The application will enable the decision makers at an organization to plan out their marketing strategy focused on customer retention, eventually saving them a major chunk of time, resources and energy.
