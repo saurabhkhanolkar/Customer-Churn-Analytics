@@ -10,7 +10,6 @@ from imblearn.combine import SMOTETomek
 
 def ml(dataset):
     data_train=dataset.loc[dataset['years for cust']>10]
-    data_test=dataset.loc[dataset['years for cust']<=10]
     data_train.drop(['Years since opening the account','years for cust'],axis=1,inplace=True)
     X = data_train.iloc[:, :-1].values
     y = data_train.iloc[:, -1].values
@@ -30,6 +29,12 @@ def ml(dataset):
     y_train=yres
     classifier = LogisticRegression(random_state = 0)
     classifier.fit(X_train, y_train)
+
+    import pickle
+    pickle.dump(classifier,open('clss.pkl','wb'))
+
+
+    daka=pd.read_csv('stage2data(1).csv')
     data_test=dataset.loc[dataset['years for cust']<=10]
     data_test.drop(['Years since opening the account','years for cust'],axis=1,inplace=True)
     X = data_test.iloc[:, :-1].values
@@ -46,4 +51,7 @@ def ml(dataset):
     X_test=X
     y_test=y        
     y_pred = classifier.predict(X_test)
-    st.write(y_pred)    
+    return(y_pred)
+    for i in range(len(y_pred)):
+        if(y_pred[i]==1):
+            st.write('Custmer Number',daka['CustNo'][i],'using account number',daka['PrdAcctId'][i],'is at a high risk of churning out.' )
